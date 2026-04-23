@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f2f2f2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: #213635;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    height: 120px;
+    background-color: #348e91;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.main-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    background-color: #1c5052;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #348e91;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #348e91;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 1.8rem;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    background: #213635;
+    border: 1px solid #348e91;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+#iniciar {
+    padding: 15px;
+    background-color: #348e91;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#iniciar:hover {
+    background-color: #286e70;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#corpoJogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px;
+    background-color: #1c5052;
+    border-radius: 10px;
+    width: 450px; 
+    height: 450px; 
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 50px;
+}
+
+.quadrado {
+    display: flex;
+    background-color: #f2f2f2;
+    font-size: 80px;
+    align-items: center;
+    justify-content: center;
+    color: #348e91;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.1s;
+}
+
+.esconder {
+    visibility: hidden;
+}
+
+@media (max-width: 500px) {
+    #corpoJogo {
+        width: 90vw;
+        height: 90vw;
+        gap: 5px;
+        padding: 8px;
+    }
+    
+    .quadrado {
+        font-size: 50px;
+    }
+    
+    .main-layout {
+        padding-top: 140px;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 90vw;
+    }
+}
